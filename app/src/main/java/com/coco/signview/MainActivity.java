@@ -31,14 +31,20 @@ public class MainActivity extends AppCompatActivity {
                 if (count <= mStepBeans.size() - 1) {
                     if (count == 0) {
                         mStepView.startSignAnimation(count);
+                        SignBean bean = mStepBeans.get(count);
+                        bean.setState(SignBean.STEP_COMPLETED);
                         count++;
                     } else {
                         mStepView.startSignAnimation(count);
+                        SignBean bean = mStepBeans.get(count);
+                        bean.setState(SignBean.STEP_COMPLETED);
                         count++;
                     }
                 } else {
                     count = mStepBeans.size() - 1;
                     mStepView.startSignAnimation(count);
+                    SignBean bean = mStepBeans.get(count);
+                    bean.setState(SignBean.STEP_COMPLETED);
                 }
 
 
